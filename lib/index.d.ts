@@ -123,11 +123,11 @@ export interface WrappedFormMethods {
   setFields(maybeNestedFields: any, callback: (...args: any[]) => any): void;
   setFieldsInitialValue(initialValues: any): void;
  
-  validateFields(fieldNames: string[], options: ValidateFieldsOptions, callback: (errors: ValidateErrors, values: any[]) => void): Promise<any>;
+  validateFields(fieldNames: string[], options: ValidateFieldsOptions, callback: (errors: ValidateErrors, values: ValidateValues) => void): Promise<any>;
   validateFields(fieldNames: string[], options: ValidateFieldsOptions): Promise<any>;
-  validateFields(options: ValidateFieldsOptions, callback: (errors: ValidateErrors, values: any[]) => void): Promise<any>;
-  validateFields(fieldNames: string[], callback: (errors: ValidateErrors, values: any[]) => void): Promise<any>;
-  validateFields(callback: (errors: ValidateErrors, values: any[]) => void): Promise<any>;
+  validateFields(options: ValidateFieldsOptions, callback: (errors: ValidateErrors, values: ValidateValues) => void): Promise<any>;
+  validateFields(fieldNames: string[], callback: (errors: ValidateErrors, values: ValidateValues) => void): Promise<any>;
+  validateFields(callback: (errors: ValidateErrors, values: ValidateValues) => void): Promise<any>;
  
   getFieldsError(names?: string[]): any;
   getFieldError(name: string): any;
