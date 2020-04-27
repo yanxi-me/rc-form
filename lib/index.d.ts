@@ -119,8 +119,8 @@ export interface WrappedFormMethods {
   getFieldsValue(fieldName?: string[]): any;
   getFieldValue(fieldName: string): any;
   getFieldInstance(fieldName: string): any;
-  setFieldsValue(changedValues: any, callback: (...args: any[]) => any): void;
-  setFields(maybeNestedFields: any, callback: (...args: any[]) => any): void;
+  setFieldsValue(changedValues: any, callback?: (...args: any[]) => any): void;
+  setFields(maybeNestedFields: any, callback?: (...args: any[]) => any): void;
   setFieldsInitialValue(initialValues: any): void;
  
   validateFields(fieldNames: string[], options: ValidateFieldsOptions, callback: (errors: ValidateErrors, values: ValidateValues) => void): Promise<any>;
